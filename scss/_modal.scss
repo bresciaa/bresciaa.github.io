@@ -1,0 +1,58 @@
+.overlay.hidden, .modal.hidden { display: none; }
+
+.overlay {
+    background: rgba(0,0,0, 0.6);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    z-index: 2;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    .section__title {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em 5%;
+        button { padding: 0.2em; }
+        h2 {
+            text-align: left;
+            text-overflow: ellipsis;
+            width: 80%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    .content {
+        width: 90%;
+        margin: 1em auto 0px auto;
+        overflow-y: auto;
+
+        #modal__images {
+            display: flex;
+            flex-direction: column;
+            img {
+                width: 100%;
+                margin-bottom: 1em;
+            }
+        }
+
+        h4 {
+            margin-bottom: 0.8em;
+        }
+
+        p { padding-bottom: 3em; }
+    }
+}
+

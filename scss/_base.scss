@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transition: 200ms ease-in;
+}
+
+img, svg { 
+    display: block; 
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 15px;
+}
+
+li { list-style-position: outside; }
+
+$green-1: #D1F371;
+$green-2: #1BDC8C;
+$green-3: #149762;
+$box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.10);
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+html, body {
+    --background: #F8F8F8;
+    --background-2: #F3F3F3;
+    --text: #23292D;
+    --gradient-color: linear-gradient(150deg, #1BDC8C, #149762 75%);
+
+    min-height: 100%;
+    background: var(--background-2);
+    color: var(--color);
+    scroll-behavior: smooth;
+}
+
+body.dark {
+    --background: #23292D;
+    --background-2: #181A1F;
+    --text: #F5F5F5;
+    --gradient-color: linear-gradient(150deg, #D1F371, #1BDC8C 60%, #149762 90%);
+}  
+
+// disables scroll when the nav window is open
+html.nav__active, body.nav__active {
+    overflow: hidden;
+}
+
+$fonts: (
+    "h1": 800 3rem 'Poppins',
+    "h2": bold 1.5rem 'Poppins',
+    "h3": 500 1rem 'Poppins',
+    "h4": bold 0.8rem 'Raleway',
+    "body": 0.8rem 'DM Sans',
+    "date": 0.8rem 'DM Sans'
+);
+
+h1 {
+    font: map-get($fonts, h1), sans-serif;
+    line-height: 105%;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: var(--gradient-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+h2 {
+    font: map-get($fonts, h2), sans-serif;
+    color: var(--background);
+    display: block;
+}
+
+h3 {
+    font: map-get($fonts, h3), sans-serif;
+    color: var(--text);
+    line-height: 1.5rem;
+    font-weight: bold;
+}
+
+h4 {
+    font: map-get($fonts, h4), sans-serif;
+    color: var(--text);
+    height: max-content;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    opacity: 0.7;
+}
+
+.body {
+    font: map-get($fonts, body), sans-serif;
+    color: var(--text);
+}
+
+.date {
+    font: map-get($fonts, date), sans-serif;
+    color: var(--text);
+    margin-top: 0.3rem;
+}
+
+main {
+    background: var(--background-2);
+    min-height: 100%;
+    width: 90%;
+    margin: 0px auto;
+    padding-bottom: 10%;
+}
+
+section {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .section__title {
+        background: #1BDC8C;
+        width: 100%;
+        text-align: center;
+        padding: 0.5em;
+    }
+}
+
+section:not(.home) {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: $box-shadow;
+    background: var(--background);
+    margin-bottom: 3rem;
+}
+
+section:not(.home, .portfolio) {
+    .container {
+        margin: 30px auto 4em auto;
+        width: 90%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    h1 { font-size: 4rem; }
+    h2 { font-size: 2rem;}
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1rem; }
+    .body { font-size: 1rem; };
+
+    main {
+        width: 70%;
+    }
+
+    section:not(.home, .portfolio) {
+        margin-bottom: 3rem;
+
+        .container {
+            margin: 40px auto 4em auto;
+            width: 80%;
+            height: 100%;
+        }
+    }
+}

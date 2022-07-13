@@ -1,0 +1,110 @@
+.portfolio {
+    .container {
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 1fr);
+        grid-column-gap: 20px;
+        grid-auto-flow: column;
+        scroll-snap-type: x mandatory;
+        align-items: center;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        padding-bottom: 1em;
+    }
+
+    .portfolio__card {
+        background: var(--background);
+        align-items: start;
+        scroll-snap-align: center;
+        box-shadow: $box-shadow;
+        border-radius: 15px;
+        max-width: 65vw;
+        width: 300px;
+        cursor: pointer;
+        border: 1px solid rgba(166, 166, 166, 0.1);
+        background-clip: padding-box;
+        -webkit-background-clip: padding-box;
+        overflow: hidden;
+
+        .portfolio__image {
+            max-width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .captions {
+            padding: 0.8rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        
+            h3 {
+                color: var(--text);
+                font-weight: 500;
+                width: 90%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            svg {
+                fill: var(--text);
+                transition: 50ms;
+            }
+        }   
+    }
+
+    .portfolio__card:first-child { margin-left: 8vw; }
+    .portfolio__card:last-child{ margin-right: 8vw; }
+
+    .portfolio__card:hover {
+        .captions svg {
+            fill: $green-2;
+        }
+        .captions h3 {
+            color: $green-2;
+        }
+    }
+
+    .portfolio__arrows button {
+        position: absolute;
+        top: 50%;
+        width: 32px;
+        height: 65px;
+        background: $green-2;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        svg { stroke: var(--background) }
+        &.left {
+            border-radius: 0px 15px 15px 0px;
+            left: 0%
+        }
+        &.right { 
+            border-radius: 15px 0px 0px 15px;
+            right: 0%;
+        }
+    }
+
+    .portfolio__arrows:disabled {
+        border: 2px solid $green-2;
+        background: transparent;
+        svg {
+            color: $green-2;
+        }
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .portfolio {
+        .portfolio__arrows button {
+            width: 40px;
+            height: 80px
+        }
+
+        .portfolio__card:first-child { margin-left: 3vw; }
+        .portfolio__card:last-child{ margin-right: 3vw; }
+    }
+}
