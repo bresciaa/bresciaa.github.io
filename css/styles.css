@@ -749,8 +749,8 @@ nav {
   position: fixed;
   z-index: 2;
   top: 10%;
-  left: 30%;
-  width: 40%;
+  left: 5%;
+  width: 90%;
   max-height: 80vh;
   overflow-y: auto;
 }
@@ -804,5 +804,12 @@ nav {
 
 .modal .content p {
   padding-bottom: 3em;
+}
+
+@media screen and (min-width: 730px) {
+  .modal {
+    left: 25%;
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
