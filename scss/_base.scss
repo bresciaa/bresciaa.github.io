@@ -58,7 +58,7 @@ $fonts: (
     "h3": 500 1rem 'Poppins',
     "h4": bold 0.8rem 'Raleway',
     "body": 0.8rem 'DM Sans',
-    "date": 0.8rem 'DM Sans'
+    "date": 0.8rem 'Poppins'
 );
 
 h1 {
@@ -98,12 +98,14 @@ h4 {
 .body {
     font: map-get($fonts, body), sans-serif;
     color: var(--text);
+    letter-spacing: 0.02em;
 }
 
 .date {
     font: map-get($fonts, date), sans-serif;
     color: var(--text);
     margin-top: 0.3rem;
+    letter-spacing: 0.05em;
 }
 
 main {
@@ -147,12 +149,12 @@ section:not(.home, .portfolio) {
 @media screen and (min-width: 550px) {
     h1 { font-size: 4rem; }
     h2 { font-size: 2rem;}
-    h3 { font-size: 1.3rem; }
-    h4 { font-size: 1rem; }
+    h3 { font-size: 1rem; }
+    h4 { font-size: 0.9rem; }
     .body { font-size: 1rem; };
 
     main {
-        width: 70%;
+        width: 80%;
     }
 
     section:not(.home, .portfolio) {

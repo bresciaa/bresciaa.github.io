@@ -29,7 +29,7 @@ $(document).ready( () => {
     });
 
     // PORTFOLIO ARROWS
-    let container = $('.portfolio.container');
+    let container = $('.portfolio .container');
     $('.portfolio__arrows .left').on('click', () => {
         $(container).animate({ scrollLeft: '-=' + 290 }, 300);
     });

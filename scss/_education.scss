@@ -1,46 +1,39 @@
 .education {
-    .education.container {
+    .school {
+        break-inside: avoid-column;
         display: grid;
-        grid-column-gap: 2rem;
-        grid-row-gap: 1.8rem;
-        grid-auto-flow: column;
-        grid-auto-rows: min-content;
-        grid-auto-flow: row;
+        grid-template-columns: min-content 5fr;
+        grid-row-gap: 0.5rem;
+        margin-bottom: 2em;
 
-        .school {
-            display: grid;
-            grid-template-columns: min-content 5fr;
-            grid-row-gap: 0.5rem;
+        .school__logo {
+            border-radius: 50%;
+            box-shadow: $box-shadow;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
 
-            .school__logo {
+            img {
+                max-height: 100%;
+                max-width: 100%;
                 border-radius: 50%;
-                box-shadow: $box-shadow;
-                width: 60px;
-                height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-    
-                img {
-                    max-height: 100%;
-                    max-width: 100%;
-                    border-radius: 50%;
-                    object-fit: fit;
-                }
+                object-fit: fit;
             }
+        }
 
-            header {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-left: 0.8rem;
-            }
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 0.8rem;
+        }
 
-            .details {
-                grid-column: 2/3;
-                margin-left: 0.8rem;
-            }
+        .details {
+            grid-column: 2/3;
+            margin-left: 0.8rem;
         }
     }
 }

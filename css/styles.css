@@ -90,12 +90,14 @@ h4 {
 .body {
   font: 0.8rem "DM Sans", sans-serif;
   color: var(--text);
+  letter-spacing: 0.02em;
 }
 
 .date {
-  font: 0.8rem "DM Sans", sans-serif;
+  font: 0.8rem "Poppins", sans-serif;
   color: var(--text);
   margin-top: 0.3rem;
+  letter-spacing: 0.05em;
 }
 
 main {
@@ -152,16 +154,16 @@ section .container {
     font-size: 2rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .body {
     font-size: 1rem;
   }
   main {
-    width: 70%;
+    width: 80%;
   }
   section:not(.home, .portfolio) {
     margin-bottom: 3rem;
@@ -409,6 +411,9 @@ nav {
 }
 
 .experience .experience__card {
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid-column;
+  margin-bottom: 1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: min-content 5fr;
@@ -418,7 +423,7 @@ nav {
       grid-template-rows: -webkit-min-content auto;
       grid-template-rows: min-content auto;
   grid-row-gap: 1.2em;
-  grid-column-gap: 0.8em;
+  grid-column-gap: 1em;
 }
 
 .experience .experience__card .experience__logo {
@@ -484,12 +489,16 @@ nav {
 
 @media screen and (min-width: 1070px) {
   .experience .container, .education .container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2em;
-    grid-row-gap: 1em;
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 7vw;
+            column-gap: 7vw;
+    -webkit-column-rule: 1px solid rgba(35, 41, 45, 0.4);
+            column-rule: 1px solid rgba(35, 41, 45, 0.4);
+  }
+  body.dark .experience .container, body.dark .education .container {
+    -webkit-column-rule: 1px solid rgba(245, 245, 245, 0.4);
+            column-rule: 1px solid rgba(245, 245, 245, 0.4);
   }
 }
 
@@ -662,27 +671,19 @@ nav {
   }
 }
 
-.education .education.container {
-  display: -ms-grid;
-  display: grid;
-  grid-column-gap: 2rem;
-  grid-row-gap: 1.8rem;
-  grid-auto-flow: column;
-  grid-auto-rows: -webkit-min-content;
-  grid-auto-rows: min-content;
-  grid-auto-flow: row;
-}
-
-.education .education.container .school {
+.education .school {
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid-column;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: min-content 5fr;
       grid-template-columns: -webkit-min-content 5fr;
       grid-template-columns: min-content 5fr;
   grid-row-gap: 0.5rem;
+  margin-bottom: 2em;
 }
 
-.education .education.container .school .school__logo {
+.education .school .school__logo {
   border-radius: 50%;
   -webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
@@ -700,7 +701,7 @@ nav {
   overflow: hidden;
 }
 
-.education .education.container .school .school__logo img {
+.education .school .school__logo img {
   max-height: 100%;
   max-width: 100%;
   border-radius: 50%;
@@ -708,7 +709,7 @@ nav {
      object-fit: fit;
 }
 
-.education .education.container .school header {
+.education .school header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,7 +723,7 @@ nav {
   margin-left: 0.8rem;
 }
 
-.education .education.container .school .details {
+.education .school .details {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -796,6 +797,7 @@ nav {
 .modal .content #modal__images img {
   width: 100%;
   margin-bottom: 1em;
+  border-radius: 20px;
 }
 
 .modal .content h4 {
