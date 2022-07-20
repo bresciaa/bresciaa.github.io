@@ -1,7 +1,11 @@
 .home {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 15vh;
-    
+
+    .portrait, h1, h3, .swipe__signifier, .media__buttons {
+        margin-bottom: 1rem;
+    }
+
     h3 {
         text-align: center;
         font-weight: 500;
@@ -11,23 +15,30 @@
         max-width: 150px;
         max-height: 150px;
         border-radius: 50%;
-        margin-bottom: 2rem;
     }
 
     .media__buttons {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         
         button {
             background: linear-gradient(150deg, #1BDC8C, #149762 75%);
             box-shadow: $box-shadow;
             border: none;
-            width: 45px;
-            height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 2rem;
+            padding: 0.5em 1em;
+            margin-bottom: 1em;
+            
+            p {
+                font: 0.9rem 'DM Sans';
+                color: var(--background-2);
+                letter-spacing: 0.02em;
+                font-weight: 500;
+                margin-left: 1em;
+            }
         }
         button:not(:last-child) {
             margin-right: 20px;
@@ -37,8 +48,7 @@
     .swipe__signifier {
         cursor: pointer;
         height: fit-content;
-        margin-top: auto;
-        margin-bottom: auto;
+        margin: auto 0px;
         padding: 1em;
 
         svg {

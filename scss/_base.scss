@@ -64,7 +64,6 @@ $fonts: (
 h1 {
     font: map-get($fonts, h1), sans-serif;
     line-height: 105%;
-    margin-bottom: 1rem;
     text-align: center;
     background: var(--gradient-color);
     background-clip: text;
