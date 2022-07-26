@@ -137,12 +137,10 @@ section:not(.home) {
     margin-bottom: 3rem;
 }
 
-section:not(.home, .portfolio) {
-    .container {
-        margin: 30px auto 4em auto;
-        width: 90%;
-        height: 100%;
-    }
+section:not(.home, .portfolio) > .container {
+    margin: 30px auto 4em auto;
+    width: 90%;
+    height: 100%;
 }
 
 @media screen and (min-width: 550px) {

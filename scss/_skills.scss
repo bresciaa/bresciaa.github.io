@@ -2,7 +2,7 @@
     .container {
         display: flex;
         flex-direction: column;
-        width: max-content;
+        max-width: fit-content;
         padding: 1.3rem auto;
     }
     .skill__set:not(:last-child) { margin-bottom: 2rem; }
