@@ -54,7 +54,29 @@
                 fill: var(--text);
                 transition: 50ms;
             }
-        }   
+        }
+
+        a {
+            background: $green-2;
+            box-shadow: $box-shadow;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5em 1em;
+            margin: 0px 5px 1em 5px;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-bottom: 2em;
+            
+            p {
+                font: 0.9rem 'DM Sans';
+                color: #f8f8f8;
+                letter-spacing: 0.02em;
+                font-weight: 500;
+                margin-left: 1em;
+            }
+        }
     }
 
     .portfolio__card:first-child { margin-left: 8vw; }
