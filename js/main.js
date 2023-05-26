@@ -71,13 +71,27 @@ $(document).ready( () => {
     ];
 
     let descs = {
-        sonder: `For CompSAt’s COA Recruitment Week 2021, we had Sonder! It was a packed week for recruiting interested students by enticing them with the exciting adventure in store for them with the organization’s official mascot, Corgear!<br/><br/>As the then Vice President for Communications, I created all of the assets together with most of the promotional materials as a one-person department at the time.`,
-        te: `Tech Everywhere 2021 was an online conference-camp by GDSC-L that educated students on the latest technologies in the Philippines. Its branding was festive and quirky with the Philippines’s red, blue, and yellow.`,
-        bn: `Buddy Nights is CompSAt’s recurring project where members hangout and get to know one another. As its Creatives Head, I created promotional materials highlighting the wide range of activities for the night in theme with the holidays.`,
-        improv: `The Improv Workshop is a collaboration project between the Computer Society of the Ateneo and the Blue Bird Improv. It’s a 3-hour workshop filled with improvisation games. The branding for the event is more quirky and free with the grunge brush strokes and cartoonish mascots to tie with the chill activities.`,
-        idol: `As part of Ateneo’s online Orientation Seminar, O-idol is an initiative that showcases the talent of the incoming freshmen. As a Documentations and Publication volunteer, I layouted some publication materials while following a brand manual and using a given set of assets. The branding for the event had a Y2K and kid-core aesthetic.`,
-        dev: `Re<dev>fined was the title for GDSC-L Recruitment Week 2021. The branding for the event highlighted the warmth, comfort, and interaction within the tech organization for students interested in joining. As the then Creatives and Branding Lead, I created some of the publication materials and design assets.`,
-        personal: `Aside from creating publication materials, I do like to paint digitally too! I love drawing portraits and it is where I started taking art and design seriously.`,
+        sonder: `For CompSAt’s COA Recruitment Week 2021, our theme was Sonder! It was a packed week for recruiting potential members of the organization
+                by enticing them with an exciting adventure with the organization’s official mascot, 
+                Corgear!<br/><br/>As the then VP for Communications, I created all of the assets together with most 
+                of the promotional materials as a one-person department at the time.`,
+        te: `Tech Everywhere 2021 was an online conference-camp by GDSC-L that educated students on the latest technologies in 
+            the Philippines. Its branding was festive and quirky with the Philippines’s red, blue, and yellow.`,
+        bn: `Buddy Nights is CompSAt’s recurring project where members hangout and get to know one another. 
+            As its Creatives Head, I created promotional materials highlighting the wide range of activities 
+            for the night in theme with our Halloween and Valentines celebration.`,
+        improv: `The Improv Workshop is a collaboration project between the Computer Society of the Ateneo and the 
+                Blue Bird Improv. It’s a 3-hour workshop filled with improvisation games. The branding for the event is more 
+                quirky and free with the grunge brush strokes and cartoonish mascots to tie with the chill activities.`,
+        idol: `As part of Ateneo’s online Orientation Seminar, O-idol is an initiative that showcases the talent of the 
+              incoming college freshmen. As a Documentations and Publication volunteer, I layouted some publication materials while 
+              following a brand manual and using a given set of assets. The branding for the event had a Y2K and kid-core aesthetic.`,
+        dev: `Re<dev>fined was the title for GDSC-L Recruitment Week 2021. The branding for the event 
+             highlighted the warmth, comfort, and interaction within the tech organization to invite potential members of the organization. 
+             As the then Creatives and Branding Lead, I created some of the publication materials and design assets.`,
+        personal: `Aside from creating publication materials, I do like to paint digitally too! On my free time, I also experiment 
+                  with acrylic and gouache paints. I mainly draw portraits with a rough and painterly style in contrast to the 
+                  vectors of my other promotional works.`,
     }
 
     $('.portfolio__card').on('click', e => {

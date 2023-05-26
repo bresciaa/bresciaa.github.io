@@ -652,7 +652,8 @@ nav {
 }
 
 .portfolio .portfolio__card a p {
-  font: 0.9rem 'DM Sans';
+  font-size: 0.9rem;
+  font-family: 'DM Sans', sans-serif;
   color: #f8f8f8;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -727,7 +728,8 @@ nav {
 }
 
 .portfolio a p {
-  font: 0.9rem 'DM Sans';
+  font-size: 0.9rem;
+  font-family: 'DM Sans', sans-serif;
   color: #f8f8f8;
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -735,6 +737,9 @@ nav {
 }
 
 @media screen and (min-width: 550px) {
+  .portfolio {
+    overflow: none;
+  }
   .portfolio .portfolio__card:first-child {
     margin-left: 3vw;
   }
@@ -744,6 +749,71 @@ nav {
   .portfolio .portfolio__arrows button {
     width: 60px;
     height: 60px;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .portfolio .container {
+    width: 90%;
+    max-height: 160vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2em;
+    overflow: none;
+  }
+  .portfolio .portfolio__card {
+    width: 30%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio .portfolio__card .portfolio__image {
+    width: 100%;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .portfolio .portfolio__card .captions {
+    width: 100%;
+  }
+  .portfolio .portfolio__card:first-child, .portfolio .portfolio__card:last-child {
+    margin: 0px;
+  }
+  .portfolio .portfolio__arrows {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1390px) {
+  .portfolio .container {
+    max-height: 180vh;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .portfolio {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-height: 135vh;
+  }
+  .portfolio .portfolio__card {
+    width: 23%;
   }
 }
 
