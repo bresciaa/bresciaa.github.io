@@ -1,8 +1,9 @@
 .technical__skills {
     .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         max-width: fit-content;
+        column-gap:  5em;
         padding: 1.3rem auto;
     }
     .skill__set:not(:last-child) { margin-bottom: 2rem; }
@@ -10,5 +11,14 @@
     h3 {
         margin-bottom: 0.2em;
         font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .technical__skills {
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
     }
 }
