@@ -68,6 +68,8 @@ $(document).ready( () => {
         `<img src="./images/portfolio/wildcard-1.jpg">`,
         `<img src="./images/portfolio/talk-1.jpg">`,
         `<img src="./images/portfolio/bn-1.jpg">`,
+        `<img src="./images/portfolio/hf-2.jpg">`,
+        `<img src="./images/portfolio/hf-1.jpg">`,
     ];
 
     let descs = {
@@ -92,6 +94,10 @@ $(document).ready( () => {
         personal: `Aside from creating publication materials, I do like to paint digitally too! On my free time, I also experiment 
                   with acrylic and gouache paints. I mainly draw portraits with a rough and painterly style in contrast to the 
                   vectors of my other promotional works.`,
+        hf: `HackFest 2023 is GDSC-L’s 2 week event with a 48-hour
+            hackathon. As GDSC-L’s Chief Communications Officer, I
+            oversaw the creations and release of all publication materials
+            from digital posters and printed tarpaulins to documentation.`,
     }
 
     $('.portfolio__card').on('click', e => {
